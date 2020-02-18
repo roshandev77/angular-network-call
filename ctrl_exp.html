@@ -2,11 +2,16 @@
     <head>
         <title>CTRL Experiment</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script src="./ctrl_exp.js"></script>
+        <script src="./demo.js"></script>
     </head>
     <body ng-app="mainModule">
         <div ng-controller="CtrlName">
-            <p ng-repeat='x in details'>{{x.name}}</p>
+            <table>
+                <tr ng-repeat="(key, data) in details">
+                    <td>{{key}}</td>
+                    <td>{{data}}</td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
